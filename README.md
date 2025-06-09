@@ -8,7 +8,7 @@
 ## Links
 
 - **Link da Apresentação:** [Link do vídeo](URL_DA_DEMONSTRACAO)
-- **Vídeo Pitch:** [Link do vídeo](URL_DO_PITCH)
+- **Vídeo Pitch:** [[Link do vídeo](URL_DO_PITCH)](https://www.youtube.com/watch?v=Pg6Rxiwu_0o)
 
 
 ## Descrição
