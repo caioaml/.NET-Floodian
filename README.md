@@ -5,6 +5,29 @@
 **RM558640 - Caio Amarante**
 **RM556325 - Felipe Camargo Revolta e Souza**  
 
+flowchart LR
+    subgraph IoT
+        S1[ESP32 + Sensor Ultrassônico]
+        S2[ESP32 + Sensor de Pressão]
+    end
+    MQTT[(MQTT Broker)]
+    NodeRED[Node-RED Gateway]
+    API[Floodian API (.NET)]
+    DB[(Banco de Dados Relacional)]
+    Web[Dashboard Web]
+    Mobile[App Mobile]
+    Notification[Serviço de Notificações]
+
+    S1 -->|publica dados| MQTT
+    S2 -->|publica dados| MQTT
+    MQTT -->|subscribe| NodeRED
+    NodeRED -->|REST/MQTT| API
+    API --> DB
+    API --> Web
+    API --> Mobile
+    API --> Notification
+
+
 ## Links
 
 - **Link da Apresentação:** [Link do vídeo](URL_DA_DEMONSTRACAO)
